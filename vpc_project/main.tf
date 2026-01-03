@@ -18,3 +18,7 @@ resource "aws_subnet" "sub2" {
   availability_zone        = "ap-south-1b"
   map_public_ip_on_launch  = true
 }
+#Creating Internet Gateway
+resource "aws_internet_gateway" "igw"{
+  vpc_id = aws_vpc.myvpc.id
+}
